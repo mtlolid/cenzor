@@ -1,0 +1,18 @@
+<form name="cenzorForm">
+    <div class="badwordsWrap">
+        <span>Bad words:</span>
+        <span class="badwords">{{badWords}}</span>
+    </div>
+
+    <div class="inputWrap">
+        <input [(ngModel)]="wordAdd" [placeholder]="addPlaceHolder" type="text" name="wordsInput">
+        <input (click)="wordsAdd()" type="button" name="wordsAdd" value="Add">
+        <input (click)="wordsReset()" type="button" name="wordsReset" value="Reset">
+    </div>
+
+    <div class="textWrap">
+        <textarea [(ngModel)]="text" [placeholder]="textPlaceHolder" name="textInput" cols="30" rows="10"></textarea>
+        <input (click)="cenzorText()" type="button" name="textButton" value="Cenzor">
+    </div>
+
+</form>
